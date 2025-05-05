@@ -1,0 +1,143 @@
+html {
+    /*  Skelenton Key  */
+    --skeleton-key: 1px solid red;
+    
+    /*  Size + Space  */
+    --uno: 1.25rem;
+    --dos: calc(var(--uno) * 1.5);
+    --tres: calc(var(--uno) * 2);
+    --cuatro: calc(var(--uno) * 2.5);
+    --cinco: calc(var(--uno) * 3);
+    
+    /*  Colors  */
+    --ink: #333;
+    --paper: #F5F5F5;
+    --gray: dimgray;
+    --blue: royalblue;
+    
+    /*  Typography  */
+    font-size: 100%;
+    --font: sans-serif, system-ui;
+    
+    /*  Layout  */
+    --page-width: 65rem;
+    
+  }
+  
+  body {
+     background-color: var(--paper);
+  }
+  
+  body * {
+    border: var(--skeleton-key);
+    font-family: var(--font);
+    font-size: var(--uno);
+    color: var(--ink);
+    box-sizing: border-box;
+  }
+  
+  /* Foundation */
+  .container {
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding: var(--uno);
+  }
+  
+  header .container {
+    padding-bottom: var(--cinco);
+  }
+  
+  footer .container {
+    padding-top: var(--cinco);
+  }
+  
+  section .container {
+    padding-block: var(--cinco);
+  }
+  
+  picture {
+    display: block;
+    max-width: 35rem;
+  }
+  
+  picture img {
+    width: 100%;
+    display: block;
+  }
+  
+  
+  /* Layout */
+  .grid-1 {
+    display: grid;
+    gap: var(--uno);
+    justify-items: start;
+  }
+  
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--uno);
+    align-items: start;
+  }
+  
+  .end-all {
+    justify-items: end;
+  }
+  
+  .gap-dos {
+    gap: var(--dos);
+  }
+  
+  .gap-tres {
+    gap: var(--tres);
+  }
+  
+  .gap-cuatro {
+    gap: var(--cuatro);
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: var(--tres);
+  }
+  
+  h2 {
+    font-size: var(--dos);
+  }
+  
+  p {
+    max-width: 65ch;
+  }
+  
+  p, a, li {
+    line-height: 1.5;
+    color: var(--gray);
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  
+  /* Buttons */
+  .primary-btn {
+    background-color: var(--blue);
+    color: var(--paper);
+    padding: calc(var(--uno) / 2) var(--uno);
+    display: inline-block;
+    border-radius: 0.25rem;
+  }
+  
+  .text-link {
+    color: var(--blue);
+    text-decoration: underline;
+  }
